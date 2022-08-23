@@ -15,8 +15,9 @@ export class ApiService {
         );
     }
     async getBotResponse(message: string): Promise<any> {
-        const obj = await this.getEndpoint(`https://nov-chatbot.herokuapp.com/chat?message=${message}`);
-        console.log(obj);
-        return obj;
+
+        const chatBotResponse = await this.getEndpoint(`https://nov-chatbot.herokuapp.com/chat?message=${message}`);
+        console.log(chatBotResponse);
+        return chatBotResponse;
     }
 }
